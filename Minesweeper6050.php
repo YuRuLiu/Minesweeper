@@ -75,4 +75,3 @@ function uniqueRand($min, $max, $num) {
 }
 
 $time2 = microtime(true);
-echo $time2 - $time1;
