@@ -12,11 +12,6 @@ foreach ($arr as $rand) {
 }
 
 for ($i=0;$i<3000;$i++) {
-
-    if ($map[$i] == "M") {
-        $map[$i] == "M";
-    }
-
     if (is_numeric($map[$i])) {
         //左
         if ($map[$i-1] == "M" && (($i-1)%60 != 59)) {
