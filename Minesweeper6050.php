@@ -5,7 +5,7 @@ for ($x=0;$x<3000;$x++) {
     $map[] = "0";
 }
 
-$arr = uniqueRand(0, 3000, 1200);
+$arr = uniqueRand(0, 2999, 1200);
 
 foreach ($arr as $rand) {
     $map[$rand] = "M";
@@ -57,8 +57,8 @@ for ($i=0;$i<3000;$i++) {
 function uniqueRand($min, $max, $num) {
     $rand = array();
 
-    for ($i=1;$i<=$num;$i++) {
-        $b = rand($min, $max);
+    for ($i=0;$i<$num;$i++) {
+        $b = mt_rand($min, $max);
 
         if (!in_array($b, $rand)) {
             $rand[$i] = $b;
@@ -70,3 +70,4 @@ function uniqueRand($min, $max, $num) {
 }
 
 $time2 = microtime(true);
+//echo $time2 - $time1;
